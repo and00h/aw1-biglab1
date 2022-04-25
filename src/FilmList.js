@@ -44,12 +44,12 @@ function FilmItem(props) {
               <Button variant={props.editing ? "success" : "light"}>
                 {
                   props.editing ?
-                    <i class="bi bi-check" style={{ color: "white" }}></i>
-                    : <i class="bi bi-pencil" style={{ color: "black" }}></i>
+                    <i className="bi bi-check" style={{ color: "white" }}></i>
+                    : <i className="bi bi-pencil" style={{ color: "black" }}></i>
                 }
               </Button>
               <Button variant="danger" onClick={() => props.deleteFilm(props.film.id)} disabled={props.editing}>
-                <i class="bi bi-trash" style={{ color: "white" }}></i>
+                <i className="bi bi-trash" style={{ color: "white" }}></i>
               </Button>
             </ButtonGroup>
           </Col>

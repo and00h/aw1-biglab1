@@ -56,6 +56,8 @@ export function FilmLibrary() {
 
     this.getSeenLastMonth = () => {
         return [...this.films]
-            .filter(x => { return x.watchdate && dayjs().subtract(30, 'days').diff(x.watchdate) < 30; })
+            .filter(x => { 
+                return x.watchdate && dayjs().diff(x.watchdate, 'day') < 30; 
+            })
     };
 }
